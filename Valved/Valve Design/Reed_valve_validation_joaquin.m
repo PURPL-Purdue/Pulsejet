@@ -56,7 +56,7 @@ function Reed_valve_validation()
         plot(t, mdot, 'LineWidth', 2);
         grid on;
         xlabel('Time (s)');
-        ylabel('Mass Flow Rate \dot{m} (kg/s)');
+        ylabel('Mass Flow Rate (kg/s)');
         title('Mass Flow Rate Through Orifice (Subsonic Model)');
 end
 
@@ -95,3 +95,4 @@ function mdot = orificeMassFlow_subsonic(P_up, T_up, P_down, A, gamma, R)
         mdot = A * sqrt(sqrtInner);
     end
 end
+
