@@ -45,6 +45,7 @@ function Reed_valve_validation()
     assignin('base', 'TankChargingData', results);
     
      %% --- Plot results ---
+     
         figure(1);
         subplot(2,1,1);
         plot(t, P_tank/1000, 'LineWidth', 2);
@@ -95,4 +96,5 @@ function mdot = orificeMassFlow_subsonic(P_up, T_up, P_down, A, gamma, R)
         mdot = A * sqrt(sqrtInner);
     end
 end
+
 
