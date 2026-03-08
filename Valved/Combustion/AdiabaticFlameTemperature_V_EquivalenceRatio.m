@@ -1,3 +1,9 @@
+% This code calculates the adiabatic flame temperature (Max theoretical temp) inside the 
+% engine when using propane and air at different ratios. The ratio is represented with an
+% equivielence ratio (actual fuel to air ratio  / ideal fuel to air ratio), and the AFT is
+% calculated by finding the moles of each product and reactant, and multiplying it by the
+% specific enthalpy for each molecule, and setting enthalpy of reactants = enthalpy of products
+
 clear;
 clc;
 
@@ -56,4 +62,5 @@ plot(phi_values, T_ad, 'LineWidth', 2);
 grid on;
 xlabel('\phi (Equivalence Ratio)');
 ylabel('T_{ad} (K)');
+
 title('Adiabatic Flame Temperature vs Equivalence Ratio');
