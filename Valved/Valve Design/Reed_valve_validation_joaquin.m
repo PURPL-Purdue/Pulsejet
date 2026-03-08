@@ -1,3 +1,19 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+% This MATLAB script simulates compressible air intake into a
+% constant-volume tank using ODE45. It computes the tank pressure over time
+% (isothermal ideal-gas dp/dt) and the mass flow rate through an equivalent
+% orifice. 
+%
+% We test whether the mass-flow equation from the reference paper behaves
+% correctly in a simple, known case. If pressures rises toward upstream and
+% mdot decays to ~0 with reasonable trends, the equation is trusted before
+% adding variable area A(t).
+%
+% Author: Joaquin Alarcon
+%   
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 function Reed_valve_validation()
     % Gas Properties
     gamma = 1.4; % Ratio of specific heats (Cp/Cv)
@@ -96,5 +112,6 @@ function mdot = orificeMassFlow_subsonic(P_up, T_up, P_down, A, gamma, R)
         mdot = A * sqrt(sqrtInner);
     end
 end
+
 
 
